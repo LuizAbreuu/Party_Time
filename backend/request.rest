@@ -1,0 +1,90 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+      "name": "Decoração",
+      "description": "Escolha a decoração para sua festa, e nós a montamos.",
+      "price": 1400,
+      "image": "https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=892&q=80"
+}
+
+###
+GET http://localhost:3000/api/services
+
+### 
+GET http://localhost:3000/api/services/66898b941989046f182fd5f1
+
+###
+DELETE http://localhost:3000/api/services/668989451db1949928bd8d56
+
+###
+PUT  http://localhost:3000/api/services/66898b941989046f182fd5f1
+Content-Type: application/json
+
+{
+    "name": "TESTE ATUALIZAÇÃO",
+    "description": "Alguma descrição 2",
+    "price": 2500,
+    "image": "https://www.tribunapr.com.br/wp-content/uploads/2020/05/29114150/festa-clandestina-10-970x550.jpg"
+}
+
+###
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Meu evento 2",
+    "author": "Luiz Abreu",
+    "description": "Um aniversario",
+    "budget": 9000,
+    "image": "https://www.tribunapr.com.br/wp-content/uploads/2020/05/29114150/festa-clandestina-10-970x550.jpg",
+    "services": [{
+    "name": "Algum serviço 1",
+    "description": "Alguma descrição",
+    "price": 1600,
+    "image": "https://www.tribunapr.com.br/wp-content/uploads/2020/05/29114150/festa-clandestina-10-970x550.jpg"
+    },
+    {
+    "name": "Algum serviço 2",
+    "description": "Alguma descrição",
+    "price": 1600,
+    "image": "https://www.tribunapr.com.br/wp-content/uploads/2020/05/29114150/festa-clandestina-10-970x550.jpg"
+    }
+    
+    ]
+}
+
+###
+GET http://localhost:3000/api/parties 
+
+###
+GET http://localhost:3000/api/parties/66b166d9e083d959d3e69c7a
+
+###
+DELETE http://localhost:3000/api/parties/66b166d9e083d959d3e69c7a
+
+###
+PUT http://localhost:3000/api/parties/66b165ebe083d959d3e69c78
+Content-Type: application/json
+
+{
+    "title": "Meu evento 2",
+    "author": "Luiz Abreu",
+    "description": "Um aniversario",
+    "budget": 15000,
+    "image": "https://www.tribunapr.com.br/wp-content/uploads/2020/05/29114150/festa-clandestina-10-970x550.jpg",
+    "services": [{
+    "name": "Algum serviço 1",
+    "description": "Alguma descrição",
+    "price": 1600,
+    "image": "https://www.tribunapr.com.br/wp-content/uploads/2020/05/29114150/festa-clandestina-10-970x550.jpg"
+    },
+    {
+    "name": "Algum serviço 2",
+    "description": "Alguma descrição",
+    "price": 6600,
+    "image": "https://www.tribunapr.com.br/wp-content/uploads/2020/05/29114150/festa-clandestina-10-970x550.jpg"
+    }
+    
+    ]
+}
